@@ -12,7 +12,8 @@ tomcat:
     image: tomcat:8
     volumes:
     - ./tomcat-config/server.xml:/usr/local/tomcat/conf/server.xml
-    - ./library.war:/usr/local/tomcat/webapps/library.war
+    - ./ROOT:/usr/local/tomcat/webapps/
+    - ./library.war:/usr/local/tomcat/webapps/ROOT.war
     - ./tomcat-config/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
     - ./tomcat-config/context.xml:/usr/local/tomcat/conf/context.xml
     ports:
