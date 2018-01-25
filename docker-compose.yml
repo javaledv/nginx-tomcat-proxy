@@ -5,6 +5,7 @@ nginx:
     - 443:443
     volumes:
     - ./default.conf:/etc/nginx/conf.d/default.conf:ro
+    - ./static:/var/www/library/:ro
     links:
     - tomcat
 
